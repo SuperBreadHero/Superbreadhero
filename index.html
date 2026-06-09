@@ -5,30 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Super Bread Hero Man</title>
 <link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="favicon.png">
-  .floating-bread {
-    animation: floatBread 4s ease-in-out infinite;
-    filter: drop-shadow(0 0 20px rgba(255, 196, 0, 0.3));
-    transition: filter 0.3s ease;
-}
-
-.floating-bread:hover {
-    filter: drop-shadow(0 0 40px rgba(255, 196, 0, 0.7));
-}
-
-@keyframes floatBread {
-    0% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
-}
+<link rel="apple-touch-icon" href="favicon.png">}
   <style>
     * { box-sizing: border-box; }
 
@@ -209,6 +186,17 @@
         transform: translateY(0px);
     }
 }
+}.floating-bread {
+  max-width: 100%;
+  width: 450px;
+  border-radius: 20px;
+  animation: floatBread 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(255, 196, 0, 0.3));
+  transition: filter 0.3s ease;
+}
+
+.floating-bread:hover {
+  filter: drop-shadow(0 0 40px rgba(255, 196, 0, 0.7));
 }
   </style>
 </head>

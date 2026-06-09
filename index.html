@@ -4,91 +4,188 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Super Bread Hero Man</title>
+
   <style>
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #0b0b0b;
-      color: white;
-      text-align: center;
+      background: #050505;
+      color: #fff;
     }
 
     .hero {
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: 1fr 0.85fr;
       align-items: center;
-      padding: 30px;
-      background: radial-gradient(circle at center, #2b1b00 0%, #0b0b0b 65%);
+      gap: 40px;
+      padding: 40px;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 193, 7, 0.22), transparent 35%),
+        linear-gradient(135deg, #050505 0%, #15100a 50%, #050505 100%);
+    }
+
+    .badge {
+      color: #f7c948;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
     }
 
     h1 {
-      font-size: clamp(3rem, 10vw, 7rem);
+      font-size: clamp(3rem, 8vw, 6.8rem);
+      line-height: 0.9;
       margin: 0;
-      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 0 0 22px rgba(255, 200, 50, 0.25);
+    }
+
+    .subtitle {
+      color: #f7c948;
+      font-size: clamp(1.4rem, 3vw, 2.4rem);
+      font-weight: 900;
+      margin: 18px 0;
       text-transform: uppercase;
     }
 
-    h2 {
-      color: #f5c542;
-      font-size: clamp(1.4rem, 4vw, 2.5rem);
-      margin: 10px 0 20px;
+    p {
+      max-width: 650px;
+      font-size: 1.2rem;
+      line-height: 1.65;
+      color: #dddddd;
     }
 
-    p {
-      max-width: 700px;
-      font-size: 1.2rem;
-      line-height: 1.6;
-      color: #ddd;
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
     }
 
     .button {
       display: inline-block;
-      margin-top: 25px;
-      padding: 16px 28px;
-      background: #f5c542;
-      color: #111;
-      font-weight: bold;
+      padding: 16px 26px;
+      border-radius: 999px;
+      font-weight: 900;
       text-decoration: none;
-      border-radius: 8px;
-      font-size: 1.2rem;
-      transition: transform 0.2s ease, background 0.2s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    .button:hover {
-      transform: scale(1.05);
-      background: #ffd95c;
+    .primary {
+      background: #f7c948;
+      color: #111;
+      box-shadow: 0 0 25px rgba(247, 201, 72, 0.35);
+    }
+
+    .secondary {
+      border: 2px solid #f7c948;
+      color: #f7c948;
+    }
+
+    .cover-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .cover {
+      width: min(100%, 520px);
+      border-radius: 18px;
+      box-shadow: 0 0 45px rgba(247, 201, 72, 0.28);
+      border: 1px solid rgba(247, 201, 72, 0.25);
+    }
+
+    .section {
+      padding: 60px 30px;
+      text-align: center;
+      background: #0b0b0b;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .section h2 {
+      color: #f7c948;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin: 0 0 15px;
+      text-transform: uppercase;
     }
 
     footer {
-      padding: 20px;
+      text-align: center;
+      padding: 24px;
+      background: #020202;
+      color: #999;
       font-size: 0.9rem;
-      color: #aaa;
-      background: #050505;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 28px 20px;
+      }
+
+      p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .cover {
+        max-height: 75vh;
+        object-fit: contain;
+      }
     }
   </style>
 </head>
+
 <body>
+  <main class="hero">
+    <div>
+      <div class="badge">Shin Comics Limited Presents</div>
 
-  <section class="hero">
-    <h1>Super Bread Hero Man</h1>
-    <h2>Official Website</h2>
+      <h1>Super Bread<br>Hero Man</h1>
 
+      <div class="subtitle">The official website</div>
+
+      <p>
+        A cursed superhero hides his face beneath a bread helmet.
+        Unfortunately, his life keeps getting worse anyway.
+        Read the absurd action-comedy comic that started as a joke
+        and somehow became everybody's problem.
+      </p>
+
+      <div class="buttons">
+        <a class="button primary" href="https://globalcomix.com/a/shin-comics-limited" target="_blank">
+          Read the Comic Free
+        </a>
+
+        <a class="button secondary" href="https://www.facebook.com/" target="_blank">
+          Follow Super Bread
+        </a>
+      </div>
+    </div>
+
+    <div class="cover-wrap">
+      <img class="cover" src="cover8.png" alt="Super Bread Hero Man Issue 8 Cover">
+    </div>
+  </main>
+
+  <section class="section">
+    <h2>Meet the Bread</h2>
     <p>
-      The world’s strangest hero is here. Follow Super Bread Hero Man,
-      a cursed superhero with a bread helmet, a dangerous love life,
-      a talking chicken ally, and problems that somehow keep getting worse.
+      Super Bread Hero Man is broke, cursed, unbelievably handsome under the helmet,
+      and somehow surrounded by gangsters, stalkers, witches, and a talking rooster.
     </p>
-
-    <a class="button" href="https://globalcomix.com/a/shin-comics-limited" target="_blank">
-      Read the Comic
-    </a>
   </section>
 
   <footer>
     © 2026 Shin Comics Limited — Super Bread Hero Man
   </footer>
-
 </body>
 </html>

@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Super Bread Hero Man</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0b;
+      color: white;
+      text-align: center;
+    }
 
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      background: radial-gradient(circle at center, #2b1b00 0%, #0b0b0b 65%);
+    }
+
+    h1 {
+      font-size: clamp(3rem, 10vw, 7rem);
+      margin: 0;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      color: #f5c542;
+      font-size: clamp(1.4rem, 4vw, 2.5rem);
+      margin: 10px 0 20px;
+    }
+
+    p {
+      max-width: 700px;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #ddd;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 16px 28px;
+      background: #f5c542;
+      color: #111;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      background: #ffd95c;
+    }
+
+    footer {
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
+      background: #050505;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>Super Bread Hero Man</h1>
+    <h2>Official Website</h2>
+
+    <p>
+      The world’s strangest hero is here. Follow Super Bread Hero Man,
+      a cursed superhero with a bread helmet, a dangerous love life,
+      a talking chicken ally, and problems that somehow keep getting worse.
+    </p>
+
+    <a class="button" href="https://globalcomix.com/a/shin-comics-limited" target="_blank">
+      Read the Comic
+    </a>
+  </section>
+
+  <footer>
+    © 2026 Shin Comics Limited — Super Bread Hero Man
+  </footer>
+
+</body>
+</html>

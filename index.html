@@ -4,16 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Super Bread Hero Man</title>
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="favicon.png">}
+
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: #050505;
-      color: #fff;
+      color: #ffffff;
     }
 
     .hero {
@@ -21,23 +25,23 @@
       display: grid;
       grid-template-columns: 1fr 0.85fr;
       align-items: center;
-      gap: 40px;
-      padding: 40px;
+      gap: 50px;
+      padding: 50px;
       background:
         radial-gradient(circle at 20% 20%, rgba(255, 193, 7, 0.22), transparent 35%),
-        linear-gradient(135deg, #050505 0%, #15100a 50%, #050505 100%);
+        linear-gradient(135deg, #050505 0%, #15100a 55%, #050505 100%);
     }
 
     .badge {
       color: #f7c948;
-      font-weight: 800;
-      letter-spacing: 3px;
+      font-weight: 900;
+      letter-spacing: 4px;
       text-transform: uppercase;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: clamp(3rem, 8vw, 6.8rem);
+      font-size: clamp(3.5rem, 8vw, 7rem);
       line-height: 0.9;
       margin: 0;
       text-transform: uppercase;
@@ -46,14 +50,14 @@
 
     .subtitle {
       color: #f7c948;
-      font-size: clamp(1.4rem, 3vw, 2.4rem);
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
       font-weight: 900;
-      margin: 18px 0;
+      margin: 22px 0;
       text-transform: uppercase;
     }
 
     p {
-      max-width: 650px;
+      max-width: 680px;
       font-size: 1.2rem;
       line-height: 1.65;
       color: #dddddd;
@@ -61,14 +65,14 @@
 
     .buttons {
       display: flex;
-      gap: 14px;
+      gap: 16px;
       flex-wrap: wrap;
-      margin-top: 28px;
+      margin-top: 30px;
     }
 
     .button {
       display: inline-block;
-      padding: 16px 26px;
+      padding: 16px 28px;
       border-radius: 999px;
       font-weight: 900;
       text-decoration: none;
@@ -78,7 +82,7 @@
 
     .primary {
       background: #f7c948;
-      color: #111;
+      color: #111111;
       box-shadow: 0 0 25px rgba(247, 201, 72, 0.35);
     }
 
@@ -90,6 +94,7 @@
     .cover-wrap {
       display: flex;
       justify-content: center;
+      align-items: center;
     }
 
     .cover {
@@ -100,32 +105,77 @@
     }
 
     .section {
-      padding: 60px 30px;
-      text-align: center;
+      padding: 70px 40px;
       background: #0b0b0b;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .section h2 {
+    .bread-section {
+      display: grid;
+      grid-template-columns: 1fr 0.8fr;
+      align-items: center;
+      gap: 60px;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .bread-text h2 {
       color: #f7c948;
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      margin: 0 0 15px;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      margin: 0 0 20px;
       text-transform: uppercase;
+    }
+
+    .bread-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .floating-bread {
+      width: min(100%, 450px);
+      border-radius: 20px;
+      animation: floatBread 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 20px rgba(255, 196, 0, 0.3));
+      transition: filter 0.3s ease;
+    }
+
+    .floating-bread:hover {
+      filter: drop-shadow(0 0 40px rgba(255, 196, 0, 0.7));
+    }
+
+    @keyframes floatBread {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
     }
 
     footer {
       text-align: center;
       padding: 24px;
       background: #020202;
-      color: #999;
+      color: #999999;
       font-size: 0.9rem;
     }
 
     @media (max-width: 900px) {
-      .hero {
+      .hero,
+      .bread-section {
         grid-template-columns: 1fr;
         text-align: center;
         padding: 28px 20px;
+      }
+
+      .buttons {
+        justify-content: center;
       }
 
       p {
@@ -133,71 +183,11 @@
         margin-right: auto;
       }
 
-      .buttons {
-        justify-content: center;
-      }
-
       .cover {
         max-height: 75vh;
         object-fit: contain;
       }
-    }.bread-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.bread-text {
-    flex: 1;
-}
-
-.bread-image {
-    flex: 1;
-    text-align: center;
-}
-
-.bread-image img {
-    max-width: 100%;
-    width: 450px;
-    border-radius: 20px;
-
-
-    filter: drop-shadow(0 0 20px rgba(255, 196, 0, 0.3));
-    transition: filter 0.3s ease;
-}
-
-.bread-image img:hover {
-    filter: drop-shadow(0 0 40px rgba(255, 196, 0, 0.7));
-}
-
-@keyframes floatBread {
-    0% {
-        transform: translateY(0px);
     }
-
-    50% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
-}
-}.floating-bread {
-  max-width: 100%;
-  width: 450px;
-  border-radius: 20px;
-  animation: floatBread 4s ease-in-out infinite;
-  filter: drop-shadow(0 0 20px rgba(255, 196, 0, 0.3));
-  transition: filter 0.3s ease;
-}
-
-.floating-bread:hover {
-  filter: drop-shadow(0 0 40px rgba(255, 196, 0, 0.7));
-}
   </style>
 </head>
 
@@ -208,7 +198,7 @@
 
       <h1>Super Bread<br>Hero Man</h1>
 
-      <div class="subtitle">The official website</div>
+      <div class="subtitle">The Official Website</div>
 
       <p>
         A cursed superhero hides his face beneath a bread helmet.
@@ -227,25 +217,33 @@
         </a>
       </div>
     </div>
-<div class="bread-image">
-<img class="floating-bread" src="cover8.png" alt="Super Bread Hero Man">›
-</div>
+
+    <div class="cover-wrap">
+      <img class="cover" src="cover8.png" alt="Super Bread Hero Man Issue 8 Cover" />
     </div>
   </main>
 
-  <section class="section bread-section">
-  <div class="bread-text">
-    <h2>MEET THE BREAD</h2>
+  <section class="section">
+    <div class="bread-section">
+      <div class="bread-text">
+        <h2>Meet the Bread</h2>
 
-    <p>
-      Super Bread Hero Man is broke, cursed, tries his very best to do
-      absolutely nothing, and somehow is surrounded by gangsters,
-      stalkers, witches, and a talking rooster.
-      What on Earth could possibly go wrong...??
-    </p>
-  </div>
+        <p>
+          Super Bread Hero Man is broke, cursed, tries his very best to do
+          absolutely nothing, and somehow is surrounded by gangsters,
+          stalkers, witches, and a talking rooster.
+          What on Earth could possibly go wrong...??
+        </p>
+      </div>
 
-  <div class="bread-image">
-<img class="cover" src="cover8.png" alt="Super Bread Hero Man Issue 8 Cover">
-  </div>
-</section>
+      <div class="bread-image">
+        <img class="floating-bread" src="meetbread.png" alt="Super Bread Hero Man" />
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Shin Comics Limited — Super Bread Hero Man
+  </footer>
+</body>
+</html>

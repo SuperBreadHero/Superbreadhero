@@ -159,11 +159,34 @@
     text-align: center;
 }
 
-.bread-image img {
+..bread-image img {
     max-width: 100%;
     width: 450px;
     border-radius: 20px;
-    filter: drop-shadow(0 0 25px rgba(255, 200, 0, 0.35));
+
+    animation: floatBread 4s ease-in-out infinite;
+
+    filter: drop-shadow(0 0 20px rgba(255, 196, 0, 0.3));
+    transition: filter 0.3s ease;
+}
+
+.bread-image img:hover {
+    filter: drop-shadow(0 0 40px rgba(255, 196, 0, 0.7));
+}
+
+@keyframes floatBread {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
 }
   </style>
 </head>

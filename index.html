@@ -97,14 +97,16 @@
       align-items: center;
     }
 
-    ..cover {
-  width: min(100%, 520px);
+    ...cover {
+  width: min(100%, 420px);
+  max-height: 78vh;
+  object-fit: contain;
   border-radius: 18px;
   box-shadow: 0 0 45px rgba(247, 201, 72, 0.28);
   border: 1px solid rgba(247, 201, 72, 0.25);
 
   opacity: 1;
-  transition: opacity 0.8s ease-in-out;
+  transition: opacity 1.2s ease-in-out;
 }
 
     .section {
@@ -254,7 +256,7 @@
   <footer>
     © 2026 Shin Comics Limited — Super Bread Hero Man
   </footer>
-  <script>
+ <script>
 const covers = [
   "cover1.png",
   "cover2.png",
@@ -267,19 +269,15 @@ let currentCover = 0;
 const cover = document.getElementById("comicCover");
 
 setInterval(() => {
-
   cover.style.opacity = 0;
 
   setTimeout(() => {
-
     currentCover = (currentCover + 1) % covers.length;
     cover.src = covers[currentCover];
-
     cover.style.opacity = 1;
+  }, 1200);
 
-  }, 800);
-
-}, 4000);
+}, 5500);
 </script>
 </body>
 </html>

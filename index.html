@@ -97,12 +97,15 @@
       align-items: center;
     }
 
-    .cover {
-      width: min(100%, 520px);
-      border-radius: 18px;
-      box-shadow: 0 0 45px rgba(247, 201, 72, 0.28);
-      border: 1px solid rgba(247, 201, 72, 0.25);
-    }
+    ..cover {
+  width: min(100%, 520px);
+  border-radius: 18px;
+  box-shadow: 0 0 45px rgba(247, 201, 72, 0.28);
+  border: 1px solid rgba(247, 201, 72, 0.25);
+
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
 
     .section {
       padding: 70px 40px;
@@ -261,10 +264,21 @@ const covers = [
 ];
 
 let currentCover = 0;
+const cover = document.getElementById("comicCover");
 
 setInterval(() => {
-  currentCover = (currentCover + 1) % covers.length;
-  document.getElementById("comicCover").src = covers[currentCover];
+
+  cover.style.opacity = 0;
+
+  setTimeout(() => {
+
+    currentCover = (currentCover + 1) % covers.length;
+    cover.src = covers[currentCover];
+
+    cover.style.opacity = 1;
+
+  }, 800);
+
 }, 4000);
 </script>
 </body>

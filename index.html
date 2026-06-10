@@ -219,7 +219,12 @@
     </div>
 
     <div class="cover-wrap">
-      <img class="cover" src="cover8.png" alt="Super Bread Hero Man Issue 8 Cover" />
+      <img
+  id="comicCover"
+  class="cover"
+  src="cover1.png"
+  alt="Super Bread Hero Man Cover"
+/>
     </div>
   </main>
 
@@ -246,5 +251,21 @@
   <footer>
     © 2026 Shin Comics Limited — Super Bread Hero Man
   </footer>
+  <script>
+const covers = [
+  "cover1.png",
+  "cover2.png",
+  "cover6.png",
+  "cover8.png",
+  "cover9.png"
+];
+
+let currentCover = 0;
+
+setInterval(() => {
+  currentCover = (currentCover + 1) % covers.length;
+  document.getElementById("comicCover").src = covers[currentCover];
+}, 4000);
+</script>
 </body>
 </html>

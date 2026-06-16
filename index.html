@@ -117,38 +117,42 @@
       border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .bread-section {
-      isplay: grid;
-  grid-template-columns: 1.3fr 0.7fr;
+    .bread-feature {
+  display: flex;
   align-items: center;
-  gap: 40px;
-  max-width: 1400px;
+  justify-content: center;
+  gap: 70px;
+  max-width: 1300px;
   margin: 0 auto;
-    }
+}
 
-    .bread-text h2 {
+.bread-copy {
+  flex: 1;
+  max-width: 650px;
+}
+
+.bread-copy h2 {
   color: #f7c948;
-  font-size: clamp(2.2rem, 4vw, 4.2rem);
+  font-size: clamp(2.5rem, 5vw, 4.8rem);
   line-height: 1;
-  margin-bottom: 25px;
+  margin: 0 0 25px;
   text-transform: uppercase;
 }
-    .bread-text {
-  max-width: 700px;
-}
 
-    .bread-image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-.bread-image img {
-  width: 100%;
-  max-width: 380px;
+.bread-poster {
+  width: 380px;
+  max-width: 100%;
   height: auto;
   border-radius: 20px;
   box-shadow: 0 0 35px rgba(247, 201, 72, 0.25);
 }
+
+@media (max-width: 900px) {
+  .bread-feature {
+    flex-direction: column;
+    text-align: center;
+    gap: 35px;
+  }
     footer {
       text-align: center;
       padding: 24px;
@@ -251,27 +255,21 @@
   </a>
 
 </section>  <section class="section">
-    <div class="bread-section">
-      <div class="bread-text">
-        <h2>Meet the Bread Hero Himself</h2>
+  <div class="bread-feature">
+    <div class="bread-copy">
+      <h2>Meet the Bread Hero Himself</h2>
 
-        <p>
-          Super Bread Hero Man is broke, cursed, tries his very best to do
-          absolutely nothing, and somehow is surrounded by gangsters,
-          stalkers, witches, and a talking rooster.
-          What on Earth could possibly go wrong...??
-          Everything. The answer is everything.
-        </p>
-      </div>
+      <p>
+        Super Bread Hero Man is broke, cursed, tries his very best to do
+        absolutely nothing, and somehow is surrounded by gangsters, stalkers,
+        witches, and a talking rooster. What on Earth could possibly go wrong...??
+        Everything. The answer is everything.
+      </p>
+    </div>
 
-      <div class="bread-image">
-  <img
-    src="hero-pose.png"
-    alt="Super Bread Hero Man" />
-</div>
-
-</div>
-  </section>
+    <img class="bread-poster" src="hero-pose.png" alt="Super Bread Hero Man" />
+  </div>
+</section>
 
   <footer>
     © 2026 Shin Comics Limited — Super Bread Hero Man

@@ -139,32 +139,6 @@
       align-items: center;
     }
 
-    .floating-bread {
-      width: min(100%, 450px);
-      border-radius: 20px;
-      animation: floatBread 4s ease-in-out infinite;
-      filter: drop-shadow(0 0 20px rgba(255, 196, 0, 0.3));
-      transition: filter 0.3s ease;
-    }
-
-    .floating-bread:hover {
-      filter: drop-shadow(0 0 40px rgba(255, 196, 0, 0.7));
-    }
-
-    @keyframes floatBread {
-      0% {
-        transform: translateY(0px);
-      }
-
-      50% {
-        transform: translateY(-10px);
-      }
-
-      100% {
-        transform: translateY(0px);
-      }
-    }
-
     footer {
       text-align: center;
       padding: 24px;
@@ -288,9 +262,10 @@
       </div>
 
       <div class="bread-image">
-        <img class="floating-bread" src="meetbread.png" alt="Super Bread Hero Man" />
-      </div>
-    </div>
+    <img
+         src="hero_pose.png"
+         alt="Super Bread Hero Man" />
+</div>
   </section>
 
   <footer>

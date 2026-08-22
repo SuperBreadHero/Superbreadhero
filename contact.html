@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact | Super Bread Hero Man</title>
+
+  <link rel="icon" type="image/png" sizes="512x512" href="/faviconnew.png">
+  <link rel="shortcut icon" href="/faviconnew.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/faviconnew.png">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(247,201,72,.14), transparent 40%),
+        #050505;
+      color: white;
+      min-height: 100vh;
+    }
+
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 42px;
+      padding: 18px 24px;
+      background: rgba(3,3,3,.96);
+      border-bottom: 1px solid rgba(247,201,72,.25);
+    }
+
+    .top-nav a {
+      color: #dddddd;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      font-size: .95rem;
+    }
+
+    .top-nav a:hover,
+    .top-nav a.active {
+      color: #f7c948;
+      text-shadow: 0 0 12px rgba(247,201,72,.55);
+    }
+
+    .contact {
+      min-height: calc(100vh - 130px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .contact-card {
+      width: min(650px, 100%);
+      padding: 50px 35px;
+      background: #0d0d0d;
+      border-radius: 22px;
+      border: 1px solid rgba(247,201,72,.22);
+      box-shadow: 0 0 35px rgba(247,201,72,.12);
+    }
+
+    h1 {
+      color: #f7c948;
+      font-size: clamp(2.5rem, 7vw, 4.5rem);
+      text-transform: uppercase;
+      margin-top: 0;
+    }
+
+    p {
+      color: #cccccc;
+      font-size: 1.15rem;
+      line-height: 1.6;
+    }
+
+    .contact-links {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-links a {
+      color: #f7c948;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      background: #020202;
+      color: #999999;
+      font-size: .9rem;
+    }
+
+    @media (max-width: 600px) {
+      .top-nav {
+        gap: 20px;
+        padding: 15px 10px;
+      }
+
+      .top-nav a {
+        font-size: .78rem;
+        letter-spacing: 1px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="top-nav">
+  <a href="index.html">Home</a>
+  <a href="bakery.html">The Bakery</a>
+  <a class="active" href="contact.html">Contact Info</a>
+</nav>
+
+<main class="contact">
+  <div class="contact-card">
+
+    <h1>Contact Info</h1>
+
+    <p>
+      For Super Bread Hero Man news, updates, business inquiries,
+      and more, connect with Shin Comics Limited.
+    </p>
+
+    <div class="contact-links">
+      <a href="https://www.facebook.com/people/Super-Bread-Hero-Man/61573594543653/" target="_blank">
+        Facebook
+      </a>
+
+      <a href="https://superbreadhero.itch.io" target="_blank">
+        itch.io
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  © 2026 Shin Comics Limited — Super Bread Hero Man
+</footer>
+
+</body>
+</html>

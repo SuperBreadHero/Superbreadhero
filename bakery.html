@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Bakery | Super Bread Hero Man</title>
+
+  <link rel="icon" type="image/png" sizes="512x512" href="/faviconnew.png">
+  <link rel="shortcut icon" href="/faviconnew.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/faviconnew.png">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(247,201,72,.12), transparent 35%),
+        #050505;
+      color: #ffffff;
+    }
+
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 42px;
+      padding: 18px 24px;
+      background: rgba(3,3,3,.96);
+      border-bottom: 1px solid rgba(247,201,72,.25);
+      box-shadow: 0 4px 22px rgba(0,0,0,.45);
+      backdrop-filter: blur(12px);
+    }
+
+    .top-nav a {
+      color: #dddddd;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      font-size: .95rem;
+    }
+
+    .top-nav a:hover,
+    .top-nav a.active {
+      color: #f7c948;
+      text-shadow: 0 0 12px rgba(247,201,72,.55);
+    }
+
+    .gallery-header {
+      text-align: center;
+      padding: 75px 20px 45px;
+    }
+
+    .gallery-header h1 {
+      color: #f7c948;
+      margin: 0;
+      font-size: clamp(3rem, 8vw, 6rem);
+      text-transform: uppercase;
+      line-height: .9;
+      text-shadow: 0 0 25px rgba(247,201,72,.25);
+    }
+
+    .gallery-header p {
+      color: #cccccc;
+      font-size: 1.25rem;
+      margin-top: 20px;
+    }
+
+    .gallery {
+      width: min(1400px, 94%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      padding-bottom: 80px;
+    }
+
+    .gallery-item {
+      background: #0d0d0d;
+      border: 1px solid rgba(247,201,72,.18);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 30px rgba(247,201,72,.18);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .gallery-info {
+      padding: 18px;
+    }
+
+    .gallery-info h2 {
+      margin: 0 0 8px;
+      color: #f7c948;
+    }
+
+    .gallery-info p {
+      margin: 0;
+      color: #aaaaaa;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      background: #020202;
+      color: #999999;
+      font-size: .9rem;
+    }
+
+    @media (max-width: 600px) {
+      .top-nav {
+        gap: 20px;
+        padding: 15px 10px;
+      }
+
+      .top-nav a {
+        font-size: .78rem;
+        letter-spacing: 1px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="top-nav">
+  <a href="index.html">Home</a>
+  <a class="active" href="bakery.html">The Bakery</a>
+  <a href="contact.html">Contact Info</a>
+</nav>
+
+<header class="gallery-header">
+  <h1>The Bakery</h1>
+  <p>Fresh from the oven.</p>
+</header>
+
+<main class="gallery">
+
+  <article class="gallery-item">
+    <img src="issue14gallery.png" alt="Super Bread Hero Man Issue 14 artwork">
+
+    <div class="gallery-info">
+      <h2>Issue #14</h2>
+      <p>Official artwork from Super Bread Hero Man Adventures.</p>
+    </div>
+  </article>
+
+</main>
+
+<footer>
+  © 2026 Shin Comics Limited — Super Bread Hero Man
+</footer>
+
+</body>
+</html>
